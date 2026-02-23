@@ -1,0 +1,220 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Yerleşim */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Navigasyon Menüsü */
+nav {
+  flex: 1 1 200px;
+  max-width: 200px;
+  border-right: 1px solid #ddd;
+  padding: 20px 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #3498db;
+    color: white;
+}
+
+/* İçerik Alanı */
+article {
+    flex: 3;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-card {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.contact-card:last-child {
+    border-bottom: none;
+}
+
+.contact-card h3 {
+    color: #2c3e50;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+    margin-top: 0;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: flex-start; /* Yazıların üstten hizalanmasını sağlar */
+}
+
+.label {
+    font-weight: bold;
+    width: 70px; /* "Email:" yazısının kaplayacağı alan - hizayı bu sağlar */
+    color: #555;
+    flex-shrink: 0; /* Etiketin daralmasını engeller */
+}
+
+.email-list {
+    display: flex;
+    flex-direction: column; /* E-postaları alt alta dizer */
+    gap: 4px; /* Aralarındaki boşluk */
+}
+
+.email-list a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+.email-list a:hover {
+    text-decoration: underline;
+}
+
+/* Syllabus Özel Stilleri */
+.syllabus-section {
+    margin-bottom: 30px;
+}
+
+.outline-list {
+    columns: 2; /* Konu listesini iki sütun yapar */
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style-type: square;
+}
+
+.highlight-box {
+    background-color: #e7f3fe;
+    border-left: 5px solid #2196F3;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.grading-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.grading-table th, .grading-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.grading-table th {
+    background-color: #f8f9fa;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #666;
+}
+
+.warning {
+    background-color: #fff3f3;
+    border: 1px solid #ffcccc;
+    padding: 15px;
+    color: #d9534f;
+    margin-top: 15px;
+}
+
+/* Mobil için liste sütununu teke düşür */
+@media (max-width: 600px) {
+    .outline-list { columns: 1; }
+}
+
+/* Lecture Notes Tablo Stilleri */
+#notes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+#notes-table th {
+    background-color: #34495e;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+#notes-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Satırların üzerine gelince renk değişimi (Zebra çizgileri) */
+#notes-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#notes-table tbody tr:hover {
+    background-color: #f1f7ff;
+    transition: 0.2s;
+}
+
+/* PDF Linklerini Buton Yapma */
+.pdf-link {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #e74c3c; /* PDF kırmızısı */
+    color: white !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.pdf-link:hover {
+    background-color: #c0392b;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.text-center {
+    text-align: center;
+}
